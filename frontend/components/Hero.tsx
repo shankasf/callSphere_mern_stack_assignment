@@ -96,9 +96,9 @@ export function Hero() {
     <section
       id="hero"
       aria-labelledby="hero-title"
-      className="relative isolate overflow-hidden pt-16"
+      className="relative isolate overflow-hidden pt-24 sm:pt-32 lg:pt-40"
     >
-      <div className="mx-auto flex max-w-6xl flex-col gap-16 px-4 sm:px-6 lg:grid lg:grid-cols-[1.05fr,1fr] lg:items-center lg:px-8">
+      <div className="mx-auto flex max-w-[1440px] flex-col gap-16 px-4 sm:px-6 lg:grid lg:grid-cols-[1.05fr,1fr] lg:items-center lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}

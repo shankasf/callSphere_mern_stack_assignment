@@ -16,14 +16,14 @@ const integrationColumns = [
 export function IntegrationsSection() {
   return (
     <section id="integrations" className="mt-24">
-      <div className="mx-auto max-w-4xl text-center">
+      <div className="mx-auto max-w-[1440px] text-center">
         <h2 className="text-3xl font-semibold text-white sm:text-4xl">Plug into your stack</h2>
         <p className="mt-4 text-base text-muted-foreground sm:text-lg">
           CallSphere connects to telephony, commerce, CRMs, and knowledge bases you already
           rely on. No rip-and-replace required.
         </p>
       </div>
-      <div className="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-3">
+      <div className="mx-auto mt-10 grid max-w-[1440px] gap-6 md:grid-cols-3">
         {integrationColumns.map((column) => (
           <div
             key={column.title}

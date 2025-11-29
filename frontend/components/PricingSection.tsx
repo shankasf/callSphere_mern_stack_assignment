@@ -61,7 +61,7 @@ export function PricingSection() {
   }, [billingCycle]);
 
   return (
-    <section id="pricing" aria-labelledby="pricing-title" className="mt-24">
+    <section id="pricing" aria-labelledby="pricing-title" className="mt-24 px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20 lg:pb-24">
       <div className="mx-auto max-w-5xl text-center">
         <h2 id="pricing-title" className="text-3xl font-semibold text-white sm:text-4xl">
           Pricing that scales with you
@@ -89,7 +89,7 @@ export function PricingSection() {
           </Button>
         </div>
       </div>
-      <div className="mx-auto mt-10 grid max-w-6xl gap-6 lg:grid-cols-3">
+      <div className="mx-auto mt-10 grid max-w-[1440px] gap-6 lg:grid-cols-3">
         {plans.map((plan) => (
           <PricingCard
             key={plan.name}

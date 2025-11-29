@@ -1,4 +1,4 @@
-// File: D:\startup\call_sphere_software\frontend\app\page.tsx
+// File: D:\client-Project\callSphere_mern_stack_assignment\frontend\app\page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

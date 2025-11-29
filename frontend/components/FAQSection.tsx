@@ -23,16 +23,19 @@ const faqItems = [
 export function FAQSection() {
   return (
     <section id="faq" className="mt-24">
-      <div className="mx-auto max-w-4xl text-center">
-        <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-          Answers before you ask
-        </h2>
-        <p className="mt-4 text-base text-muted-foreground sm:text-lg">
-          If your question isn&apos;t covered, drop us a line - we respond within a day.
-        </p>
-      </div>
-      <div className="mx-auto mt-10 max-w-4xl">
-        <FAQ items={faqItems} />
+      {/* Add responsive horizontal padding to the section content */}
+      <div className="px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="text-3xl font-semibold text-white sm:text-4xl">
+            Answers before you ask
+          </h2>
+          <p className="mt-4 text-base text-muted-foreground sm:text-lg">
+            If your question isn&apos;t covered, drop us a line - we respond within a day.
+          </p>
+        </div>
+        <div className="mx-auto mt-10 max-w-4xl">
+          <FAQ items={faqItems} />
+        </div>
       </div>
     </section>
   );

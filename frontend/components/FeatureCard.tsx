@@ -20,7 +20,7 @@ export function FeatureCard({
   return (
     <article
       className={cn(
-        "group relative overflow-hidden rounded-3xl border border-white/10 bg-secondary/60 p-6 transition hover:border-white/30 hover:bg-secondary/80",
+        "group relative h-full w-full overflow-hidden rounded-3xl border border-white/10 bg-secondary/60 p-6 transition hover:border-white/30 hover:bg-secondary/80",
         "before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:opacity-0 before:transition before:duration-500 before:content-[''] hover:before:opacity-100",
         className
       )}

@@ -21,19 +21,24 @@ const LOGOS = [
 
 export function LogoCloud() {
   return (
-    <div aria-label="Customer logos" className="mx-auto mt-10 max-w-5xl">
-      <div className="grid grid-cols-2 items-center gap-6 sm:grid-cols-4">
+    <div aria-label="Customer logos" className="mx-auto mt-16 sm:mt-20 max-w-[1440px] px-4 sm:px-6 lg:px-8">
+      <div className="text-center mb-8">
+        <p className="text-xs font-semibold uppercase tracking-widest text-indigo-300/70 sm:text-sm">
+          Trusted by leading brands
+        </p>
+      </div>
+      <div className="grid grid-cols-2 items-center gap-4 sm:gap-6 md:grid-cols-4">
         {LOGOS.map((logo) => (
           <div
             key={logo.name}
-            className="group flex h-20 items-center justify-center rounded-3xl border border-white/10 bg-white/5/50 backdrop-blur transition hover:border-white/30 hover:bg-white/10"
+            className="group flex h-16 sm:h-20 items-center justify-center rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:border-indigo-400/30  hover:shadow-[0_0_20px_-5px_rgba(99,102,241,0.3)]"
           >
             <Image
               src={logo.src}
               alt={`${logo.name} logo`}
               width={180}
               height={56}
-              className="h-12 w-auto object-contain opacity-90 transition group-hover:opacity-100"
+              className="h-10 sm:h-12 w-auto object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100"
             />
           </div>
         ))}

@@ -53,36 +53,39 @@ const featureData = [
 
 export function FeaturesSection() {
   return (
-    <section id="features" aria-labelledby="features-title" className="mt-24">
-      <div className="mx-auto flex max-w-5xl flex-col gap-4 text-center">
-        <span className="text-xs font-semibold uppercase tracking-widest text-indigo-300">
-          Why CallSphere
-        </span>
-        <h2 id="features-title" className="text-3xl font-semibold text-white sm:text-4xl">
-          Voice agents that handle the entire journey
-        </h2>
-        <p className="text-base text-muted-foreground sm:text-lg">
-          Automate product discovery, checkout, support, and scheduling - keeping your
-          operations humming around the clock.
-        </p>
-      </div>
-      <div className="mx-auto mt-10 grid max-w-6xl gap-6 lg:grid-cols-3">
-        {featureData.map((feature, index) => (
-          <motion.div
-            key={feature.title}
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: index * 0.05 }}
-            viewport={{ once: true }}
-          >
-            <FeatureCard
-              title={feature.title}
-              description={feature.description}
-              bullets={feature.bullets}
-              icon={feature.icon}
-            />
-          </motion.div>
-        ))}
+    <section id="features" aria-labelledby="features-title" className="py-16 sm:py-20 lg:py-24">
+      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-3xl flex-col gap-4 text-center">
+          <span className="text-xs font-semibold uppercase tracking-widest text-indigo-300">
+            Why CallSphere
+          </span>
+          <h2 id="features-title" className="text-3xl font-semibold text-white sm:text-4xl lg:text-5xl">
+            Voice agents that handle the entire journey
+          </h2>
+          <p className="text-base text-muted-foreground sm:text-lg">
+            Automate product discovery, checkout, support, and scheduling - keeping your
+            operations humming around the clock.
+          </p>
+        </div>
+        <div className="mx-auto mt-12 sm:mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {featureData.map((feature, index) => (
+            <motion.div
+              key={feature.title}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
+              viewport={{ once: true }}
+              className="flex"
+            >
+              <FeatureCard
+                title={feature.title}
+                description={feature.description}
+                bullets={feature.bullets}
+                icon={feature.icon}
+              />
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

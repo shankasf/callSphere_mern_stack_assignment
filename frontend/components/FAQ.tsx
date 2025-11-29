@@ -42,12 +42,14 @@ function AccordionTrigger({
     <AccordionPrimitive.Header className="w-full">
       <AccordionPrimitive.Trigger
         className={cn(
-          "flex w-full items-center justify-between rounded-3xl border border-white/10 bg-secondary/60 px-6 py-4 text-left text-base font-medium text-white transition hover:bg-secondary/80 data-[state=open]:border-indigo-400/60",
+          "flex w-full items-center justify-between rounded-3xl border border-white/10 bg-secondary/60 text-left font-medium text-white transition hover:bg-secondary/80 data-[state=open]:border-indigo-400/60",
+          // Responsive padding and text size
+          "px-4 py-3 text-sm sm:px-6 sm:py-4 sm:text-base",
           className
         )}
         {...props}
       >
-        {children}
+        <span className="max-w-[90%]">{children}</span>
         <ChevronDown
           aria-hidden
           className="h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200 data-[state=open]:rotate-180"
@@ -66,7 +68,8 @@ function AccordionContent({
     <AccordionPrimitive.Content
       className={cn(
         "overflow-hidden text-sm text-muted-foreground data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up",
-        "px-6 pb-5 pt-2"
+        // Responsive padding
+        "px-4 pb-4 pt-1 sm:px-6 sm:pb-5 sm:pt-2"
       )}
       {...props}
     >
